@@ -1,0 +1,37 @@
+module.exports = {
+  extends: [
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+    'prettier'
+  ],
+  rules: {
+    'react/prop-types': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/self-closing-comp': 'warn',
+    'import/no-named-as-default': 'off',
+    'react-hooks/rules-of-hooks': 'off', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'off' // Checks effect dependencies
+  },
+  plugins: ['react', 'import', 'jsx-a11y'],
+  parserOptions: {
+    ecmaVersion: 2021,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
+  env: {
+    es6: true,
+    browser: true,
+    jest: true,
+    node: true
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  }
+};
