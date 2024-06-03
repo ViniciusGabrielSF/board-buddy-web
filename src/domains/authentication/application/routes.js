@@ -1,5 +1,6 @@
 export const authenticationPageRoutes = {
   LOGIN: '/login',
   FORGOTPASSWORD: '/forgotPassword',
-  SIGNUP: '/signUp'
+  SIGNUP: '/signUp',
+  GAMES: '/games'
 };
