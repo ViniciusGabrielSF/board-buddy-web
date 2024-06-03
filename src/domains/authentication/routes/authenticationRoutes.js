@@ -2,7 +2,7 @@ import { Login } from '../ui/screens/login';
 import { authenticationPageRoutes } from '../application/routes';
 import { ForgotPassword } from '../ui/screens/password';
 import { SignUp } from '../ui/screens/sign-up';
-import GamesList from 'src/domains/games/ui/components/GamesList';
+import Games from '../../games/ui/screens/Games';
 
 export const authenticationRoutes = [
   {
@@ -23,6 +23,6 @@ export const authenticationRoutes = [
   {
     path: authenticationPageRoutes.GAMES,
     exact: true,
-    element: <GamesList />
+    element: <Games />
   }
 ];

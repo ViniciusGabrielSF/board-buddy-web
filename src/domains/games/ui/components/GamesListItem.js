@@ -1,16 +1,23 @@
 import { Typography } from '../../../../design-system/components/Typography';
 import { ListItemContainer } from './GamesList.styles';
 
-export const GamesListItem = ({ game : { nome, descricao}}) => {
+export const GamesListItem = ({ game : { name, description}, even, header}) => {
   return (
     
-    <ListItemContainer>
-        <Typography variant="paragraphRegular" style={{background:  'transparent' }} >
-            {nome}
+    <ListItemContainer even={even} header={header}>
+        <Typography variant="paragraphRegular" color={'inherit'}  >
+            {name}
         </Typography>
-        <Typography variant="paragraphRegular" >
-            {descricao}
+        <Typography variant="paragraphRegular" color={'inherit'} >
+            {description}
         </Typography>
+
+        {
+          header && 
+          <Typography variant="paragraphRegular" color={'inherit'} >
+          Status
+      </Typography>
+        }
     </ListItemContainer>
 
   )

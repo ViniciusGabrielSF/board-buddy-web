@@ -1,23 +1,23 @@
 import { ListContainer } from './GamesList.styles';
 import { GamesListItem } from './GamesListItem';
 
-function GamesList() {
-    const games = [{nome: 'nome do jogo', descricao: 'descricao', disponivel:true },
-    {nome: 'nome do jogo', descricao: 'descricao', disponivel:true }]
+function GamesList( {games}) {
+
   return (
-    
     <ListContainer>
-      
-       <GamesListItem game={{nome: 'Nome', descricao : 'Descricao' }} />
+       <GamesListItem game={{name: 'Nome', description : 'Descricao', avaliable: true  }} header={true} />
+  
           {games.map((game, idx) => {
             return (
-              <div key={idx} style={{ marginBottom: '15px' }}>
+              <div key={idx} >
                 <GamesListItem
                     game={game}
+                    even={idx%2}
                 />
               </div>
             );
           })}
+   
     </ListContainer>
   )
 }
