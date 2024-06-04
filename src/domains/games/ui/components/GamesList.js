@@ -1,11 +1,17 @@
 import { ListContainer } from './GamesList.styles';
 import { GamesListItem } from './GamesListItem';
 
-function GamesList( {games}) {
+import { useGames } from '../../application/hooks/useGames';
+
+function GamesList() {
+  const { games } = useGames();
+  console.log(games);
+
+  if(!games) return null;
 
   return (
     <ListContainer>
-       <GamesListItem game={{name: 'Nome', description : 'Descricao', avaliable: true  }} header={true} />
+       <GamesListItem game={{name: 'Nome', description : 'Descricao', available: true  }} header={true} />
   
           {games.map((game, idx) => {
             return (
