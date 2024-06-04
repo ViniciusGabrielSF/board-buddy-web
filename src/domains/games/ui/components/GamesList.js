@@ -1,12 +1,16 @@
 import { ListContainer } from './GamesList.styles';
 import { GamesListItem } from './GamesListItem';
 
-function GamesList( {games}) {
+import { useGames } from '../../application/hooks/useGames';
+
+function GamesList() {
+  const { games } = useGames();
+
+  if(!games) return null;
 
   return (
     <ListContainer>
-       <GamesListItem game={{name: 'Nome', description : 'Descricao'  }} header={true} />
-  
+       <GamesListItem game={{name: 'Nome', description : 'Descrição'  }} header={true} />
           {games.map((game, idx) => {
             return (
               <div key={idx} >
@@ -17,7 +21,6 @@ function GamesList( {games}) {
               </div>
             );
           })}
-   
     </ListContainer>
   )
 }
