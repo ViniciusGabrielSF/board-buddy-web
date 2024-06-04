@@ -10,7 +10,7 @@ function GamesList() {
 
   return (
     <ListContainer>
-       <GamesListItem game={{name: 'Nome', description : 'Descricao'  }} header={true} />
+       <GamesListItem game={{name: 'Nome', description : 'Descrição'  }} header={true} />
           {games.map((game, idx) => {
             return (
               <div key={idx} >
