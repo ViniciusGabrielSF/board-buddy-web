@@ -1,4 +1,4 @@
-// import { Button } from '../../../../design-system/components/Button';
+ import { Button } from '../../../../design-system/components/Button';
 import {
   InputText
 } from '../../../../design-system/components/Inputs';
@@ -6,25 +6,16 @@ import { InputGroup } from '../../../../design-system/components/FormGroup/Input
 import GamesList from '../components/GamesList';
 import { useState } from 'react';
 import { Container, SearchContainer } from './Games.styles';
-// import { Icon, Icons } from '../../../../design-system/foundations/Icons';
-
+import { useGames } from '../../application/hooks/useGames';
+import { Icon, Icons } from '../../../../design-system/foundations/Icons';
 
 function Games() {
+  const { games, searchGamesByName } = useGames();
+  const [search, setSearch] = useState('');
 
-    const [search, setSearch] = useState('');
-    const onSearchChange = (event) => {
-      setSearch(event.target.value);
-    };
-    // const onSearch = () => {
-    //   games.filter(game => game.name = search);
-    //  }
-
-
-    const games = [{name: 'nome do jogo', description: 'description', available:true },
-    {name: 'nome do jogo', description: 'description'},
-    {name: 'nome do jogo', description: 'description', available: true  },
-    {name: 'nome do jogo', description: 'description'  }]
-
+  const onSearchChange = (event) => {
+    setSearch(event.target.value);
+  };
     
   return (
    <Container>
@@ -40,9 +31,11 @@ function Games() {
                     />
             </InputGroup>
 
-            {/* <IconButton type="button" onClick={onSearch}>
-                <Icon icon={Icons.Search} variant="solid" />
-            </IconButton> */}
+            <div style={{ maxHeight: '52px'}}>
+              <Button type="button" onClick={() => void searchGamesByName(search)}>
+                  <Icon icon={Icons.Sparkles} variant="solid" />
+              </Button>
+            </div>
 
         </SearchContainer>
 

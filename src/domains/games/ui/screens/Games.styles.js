@@ -12,8 +12,8 @@ export const Container = styled.div`
 `;
 
 export const SearchContainer = styled.div`
-    display:flex;
-
+  display:flex;
+  align-items: end;
 `;
 
 

@@ -1,11 +1,7 @@
 import { ListContainer } from './GamesList.styles';
 import { GamesListItem } from './GamesListItem';
 
-import { useGames } from '../../application/hooks/useGames';
-
-function GamesList() {
-  const { games } = useGames();
-
+function GamesList({ games }) {
   if(!games) return null;
 
   return (
@@ -14,7 +10,7 @@ function GamesList() {
           {games.map((game, idx) => {
             return (
               <div key={idx} >
-                <GamesListItem
+                 <GamesListItem
                     game={game}
                     even={idx%2}
                 />
