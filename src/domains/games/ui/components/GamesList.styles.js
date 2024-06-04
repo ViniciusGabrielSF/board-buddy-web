@@ -7,24 +7,25 @@ export const ListItemContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: ${Spacing.HyperSmall};
+    gap: 3em;
 
     background-color: ${props => props.header ? Color.Neutral900 : ( props.even ? Color.White : Color.Neutral200)};
     color: ${props => props.header ? Color.White : Color.Neutral900};    
 
 `;
 
-export const AvaliableContainer = styled.div`
+export const AvailableContainer = styled.div`
     display: flex;
     align-items:center;
     gap: .5em;
 `;
 
-export const Avaliable = styled.div`
+export const Available = styled.div`
     width: .7em;
     height: .7em;
     border-radius: ${BorderRadius.Large};
 
-    background-color: ${props => props.avaliable ? Color.Teal600 : Color.Rose600 };
+    background-color: ${props => props.available ? Color.Teal600 : Color.Rose600 };
 
 
 `;
