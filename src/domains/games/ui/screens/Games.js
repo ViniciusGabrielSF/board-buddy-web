@@ -20,9 +20,9 @@ function Games() {
     //  }
 
 
-    const games = [{name: 'nome do jogo', description: 'description' },
-    {name: 'nome do jogo', description: 'description' },
-    {name: 'nome do jogo', description: 'description'  },
+    const games = [{name: 'nome do jogo', description: 'description', avaliable:true },
+    {name: 'nome do jogo', description: 'description'},
+    {name: 'nome do jogo', description: 'description', avaliable: true  },
     {name: 'nome do jogo', description: 'description'  }]
 
     

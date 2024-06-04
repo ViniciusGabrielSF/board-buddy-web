@@ -1,7 +1,7 @@
 import { Typography } from '../../../../design-system/components/Typography';
-import { ListItemContainer } from './GamesList.styles';
+import { Avaliable, AvaliableContainer, ListItemContainer } from './GamesList.styles';
 
-export const GamesListItem = ({ game : { name, description}, even, header}) => {
+export const GamesListItem = ({ game : { name, description, avaliable}, even, header}) => {
   return (
     
     <ListItemContainer even={even} header={header}>
@@ -13,11 +13,19 @@ export const GamesListItem = ({ game : { name, description}, even, header}) => {
         </Typography>
 
         {
-          header && 
+          header ?
           <Typography variant="paragraphRegular" color={'inherit'} >
-          Status
-      </Typography>
+            Status
+          </Typography>
+          :
+          <AvaliableContainer>
+            <Avaliable avaliable={avaliable}/>
+            <Typography variant="paragraphRegular" color={'inherit'}  >
+              {avaliable ?  'Disponível' : 'Emprestado'}
+            </Typography>
+          </AvaliableContainer>
         }
+
     </ListItemContainer>
 
   )

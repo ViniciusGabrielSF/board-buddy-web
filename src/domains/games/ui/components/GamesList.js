@@ -5,7 +5,7 @@ function GamesList( {games}) {
 
   return (
     <ListContainer>
-       <GamesListItem game={{name: 'Nome', description : 'Descricao', avaliable: true  }} header={true} />
+       <GamesListItem game={{name: 'Nome', description : 'Descricao'  }} header={true} />
   
           {games.map((game, idx) => {
             return (
