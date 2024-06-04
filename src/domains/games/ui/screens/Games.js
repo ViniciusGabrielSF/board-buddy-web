@@ -32,7 +32,7 @@ function Games() {
             </InputGroup>
 
             <div style={{ maxHeight: '52px'}}>
-              <Button type="button" onClick={() => void searchGamesByName(search)}>
+              <Button type="button" size="small" onClick={() => void searchGamesByName(search)}>
                   <Icon icon={Icons.Sparkles} variant="solid" />
               </Button>
             </div>

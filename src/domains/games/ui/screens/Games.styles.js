@@ -14,6 +14,7 @@ export const Container = styled.div`
 export const SearchContainer = styled.div`
   display:flex;
   align-items: end;
+  gap: 12px;
 `;
 
 

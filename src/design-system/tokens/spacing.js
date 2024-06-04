@@ -24,7 +24,7 @@ export const Spacing = {
   SquishSuperSmall: '0.25rem 0.5rem',
   SquishSmall: '0.5rem 0.75rem',
   SquishMedium: '1rem 1.5rem',
-  SquishSuperMedium: '0.5rem 1rem',
+  SquishSuperMedium: '0.9rem',
   SquishHyperMedium: '1rem 0.75rem',
   SquishMicroMedium: '0.75rem 1rem',
   SquishMicro: '0.75rem 1.5rem',
