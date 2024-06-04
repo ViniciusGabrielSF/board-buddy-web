@@ -13,7 +13,7 @@ export const Home = () => {
     <PrivatePage>
       <Container>
         <Typography variant="heading1" textAlign="center">
-          NUNTIUS
+        Board Buddy
         </Typography>
         <FormWrapper
           onSubmit={(e) => {

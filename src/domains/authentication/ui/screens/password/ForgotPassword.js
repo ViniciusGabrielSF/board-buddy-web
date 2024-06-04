@@ -11,7 +11,7 @@ export const ForgotPassword = () => {
     <Wrapper>
       <Container>
         <Typography variant="heading1" textAlign="center">
-          NUNTIUS
+        Board Buddy
         </Typography>
         <FormWrapper>
           <Typography variant="heading3" textAlign="center">

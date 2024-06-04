@@ -27,7 +27,7 @@ export const SignUp = () => {
     <Wrapper>
       <Container>
         <Typography variant="heading1" textAlign="center">
-          NUNTIUS
+        Board Buddy
         </Typography>
         <Formik
           initialValues={initialValues}
