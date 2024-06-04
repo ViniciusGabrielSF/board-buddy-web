@@ -1,3 +1,3 @@
 export const gamesPageRoutes = {
-  GET: '/games'
+  HOME: '/games',
 };

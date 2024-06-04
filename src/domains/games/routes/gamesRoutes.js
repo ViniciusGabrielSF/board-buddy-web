@@ -1,10 +1,12 @@
+
 import { gamesPageRoutes } from '../application/routes';
-import { Editgames } from '../ui/screens/edit/Editgames';
+import Games from '../ui/screens/Games';
+
 
 export const gamesRoutes = [
   {
-    path: gamesPageRoutes.GET,
+    path: gamesPageRoutes.HOME,
     exact: true,
-    element: <Editgames />
+    element: <Games />
   }
 ];

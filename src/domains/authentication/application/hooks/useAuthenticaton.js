@@ -1,30 +1,31 @@
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { apiClient } from '../../../../shared/application/api/apiClient';
-import { AuthenticationEndpoints } from '../constants/AuthenticationEndpoints';
+// import { apiClient } from '../../../../shared/application/api/apiClient';
+// import { AuthenticationEndpoints } from '../constants/AuthenticationEndpoints';
 import { storageService } from '../../../../shared/application/services/storageService';
-import { messagesPageRoutes } from '../../../messages/application/routes';
+import { gamesPageRoutes } from '../../../games/application/routes';
+// import { messagesPageRoutes } from '../../../messages/application/routes';
 
 export const useAuthentation = () => {
   const navigate = useNavigate();
 
   const login = async (user) => {
     try {
-      const { data } = await apiClient.post(
-        AuthenticationEndpoints.LOGIN,
-        user
-      );
+      // const { data } = await apiClient.post(
+      //   AuthenticationEndpoints.LOGIN,
+      //   user
+      // );
 
-      storageService.saveItem('user', {
-        username: data.user_metadata.username,
-        email: data.email,
-        about: data.user_metadata.about,
-        image_url: data.user_metadata.image_url
-      });
+      // storageService.saveItem('user', {
+      //   username: data.user_metadata.username,
+      //   email: data.email,
+      //   about: data.user_metadata.about,
+      //   image_url: data.user_metadata.image_url
+      // });
 
-      storageService.saveItem('accessToken', data.access_token);
+      // storageService.saveItem('accessToken', data.access_token);
 
-      navigate(messagesPageRoutes.HOME);
+      navigate(gamesPageRoutes.HOME);
     } catch (e) {
       console.error(e);
       toast.error('Não foi possível realizar login.');
@@ -33,20 +34,20 @@ export const useAuthentation = () => {
 
   const signup = async (user) => {
     try {
-      const { data } = await apiClient.post(
-        AuthenticationEndpoints.SIGNUP,
-        user
-      );
+      // const { data } = await apiClient.post(
+      //   AuthenticationEndpoints.SIGNUP,
+      //   user
+      // );
 
-      storageService.saveItem('user', {
-        username: data.user_metadata.username,
-        email: data.email,
-        about: 'about me ;)'
-      });
-      storageService.saveItem('accessToken', data.access_token);
+      // storageService.saveItem('user', {
+      //   username: data.user_metadata.username,
+      //   email: data.email,
+      //   about: 'about me ;)'
+      // });
+      // storageService.saveItem('accessToken', data.access_token);
 
-      toast.success('Usuário criado com sucesso!');
-      navigate(messagesPageRoutes.HOME);
+      // toast.success('Usuário criado com sucesso!');
+      navigate(gamesPageRoutes.HOME);
     } catch (e) {
       console.error(e);
       toast.error('Não foi possível realizar o cadastro.');
