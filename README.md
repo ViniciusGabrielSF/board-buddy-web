@@ -1,11 +1,23 @@
-### `yarn start`
 
-Runs the app in the development mode on [http://localhost:3000](http://localhost:3000). The page will reload when you make changes.
+# BoardBuddy Web
 
-### `yarn format`
+BoardBuddy é uma plataforma que visa conectar uma vasta comunidade de entusiastas de jogos, permitindo que compartilhem e peguem emprestado uma ampla variedade de jogos.
 
-Formats the files by according the prettier configs
+## Instalação
 
-### `yarn lint`
+```bash
+  yarn install 
+```
 
-Runs ESlint to identifying and reporting on patterns found in ECMAScript/JavaScript code
+## Execução
+
+```bash
+  yarn start 
+```
+Acessar: http://localhost:3000/
+
+## Autores
+
+- [@alinecristinapinto](https://github.com/alinecristinapinto)
+- [@1LucasVictor](https://github.com/1LucasVictor)
+- [@ViniciusGabrielSF](https://github.com/ViniciusGabrielSF)
